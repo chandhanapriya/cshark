@@ -1,49 +1,26 @@
-﻿
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+﻿using System;
 
-
-    namespace abstractdemo_implementation
+namespace Basic_construct_for__day1
+{
+    class Program
     {
-        partial class Student//partial-interface
+        static void Main(string[] args)
         {
-            string name;
-            string Email;
-            long mobileno;
-            int rollno;
+            Console.WriteLine("Hello World!");
+            Console.Write("Im happy");
 
-            public void Display()
+            String name = Console.ReadLine();
+            Console.WriteLine("NO oF Plates?");
+            int count = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(name);
+            Console.WriteLine(count);
+           // Console.WriteLine(typeof(name),typeof(count));
+            if (count >= 2)
             {
-                Console.WriteLine("Student Details");
+               
+                Console.WriteLine("too much of snacks ");
             }
 
-        }
-        partial class Student :placement//inheritance
-        {
-            public void Message()
-            {
-                Console.WriteLine("implementation of partial class");
-            }
-        }
-    abstract class placement
-    {
-        string nameofinstitute;
-        int noofstudentsplaced;
-        DateTime yearofplacement;
-
-        public void placementrecord()
-        {
-            Console.WriteLine("method will show placement records");
         }
     }
-
-   /* interface Exam
-    {
-        public void Mcqbased();
-        public void Questionbased();
-
-    }*/
 }
