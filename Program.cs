@@ -1,30 +1,49 @@
-﻿using System;
-using System.IO;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.Collections;
+﻿
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
 
 
-namespace deserialization
-{
-         public class WeatherForecast
+    namespace abstractdemo_implementation
+    {
+        partial class Student//partial-interface
         {
-            public DateTimeOffset Date { get; set; }
-            public int TemperatureCelsius { get; set; }
-            public string Summary { get; set; }
-        }
+            string name;
+            string Email;
+            long mobileno;
+            int rollno;
 
-        public class Program
-        {
-            public static void Main()
+            public void Display()
             {
-                string fileName = "WeatherForecast.json";
-                string jsonString = File.ReadAllText(fileName);
-                WeatherForecast weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString);
+                Console.WriteLine("Student Details");
+            }
 
-                Console.WriteLine($"Date: {weatherForecast.Date}");
-                Console.WriteLine($"TemperatureCelsius: {weatherForecast.TemperatureCelsius}");
-                Console.WriteLine($"Summary: {weatherForecast.Summary}");
+        }
+        partial class Student :placement//inheritance
+        {
+            public void Message()
+            {
+                Console.WriteLine("implementation of partial class");
             }
         }
+    abstract class placement
+    {
+        string nameofinstitute;
+        int noofstudentsplaced;
+        DateTime yearofplacement;
+
+        public void placementrecord()
+        {
+            Console.WriteLine("method will show placement records");
+        }
     }
+
+   /* interface Exam
+    {
+        public void Mcqbased();
+        public void Questionbased();
+
+    }*/
+}
